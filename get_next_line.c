@@ -6,7 +6,7 @@
 /*   By: egaraz <egaraz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/23 23:35:30 by egaraz            #+#    #+#             */
-/*   Updated: 2018/01/05 16:53:53 by egaraz           ###   ########.fr       */
+/*   Updated: 2018/01/05 17:39:30 by egaraz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		helper(char **line, t_lst *buffstat)
 	}
 
 	// printf("ehehege\n");
-	*line = ft_strnew(0);
+	//*line = ft_strnew(0);
 	return (0);
 }
 
@@ -96,7 +96,7 @@ int		get_next_line(const int fd, char **line)
 		buffstat = listfunction(buffstat, fd);
 	if (buffstat == NULL)
 		buffstat = ft_listnew(fd);
-	*line = 0;
+	//*line = 0;
 	while ((kek = read(fd, buf, BUFF_SIZE)) > 0)
 	{
 		buf[kek] = '\0';

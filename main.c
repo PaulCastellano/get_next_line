@@ -6,7 +6,7 @@
 /*   By: egaraz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 16:11:05 by egaraz            #+#    #+#             */
-/*   Updated: 2018/01/03 16:15:52 by egaraz           ###   ########.fr       */
+/*   Updated: 2018/01/05 17:08:33 by egaraz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 	char	*str;
 
 	i = 0;
-	fd = open("test", O_RDONLY);
+	fd = open("one_big_fat_line.txt.mine", O_RDONLY);
 	while((r = get_next_line(fd, &str)))
 	{
 		i++;
