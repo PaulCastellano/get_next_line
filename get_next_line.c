@@ -6,7 +6,7 @@
 /*   By: egaraz <egaraz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/23 23:35:30 by egaraz            #+#    #+#             */
-/*   Updated: 2018/01/05 16:38:24 by egaraz           ###   ########.fr       */
+/*   Updated: 2018/01/05 16:53:53 by egaraz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ int		helper(char **line, t_lst *buffstat)
 			return (1);
 		}
 	}
+
+	// printf("ehehege\n");
+	*line = ft_strnew(0);
 	return (0);
 }
 
