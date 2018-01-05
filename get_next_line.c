@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: egaraz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: egaraz <egaraz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/23 23:35:30 by egaraz            #+#    #+#             */
-/*   Updated: 2017/12/24 03:15:10 by egaraz           ###   ########.fr       */
+/*   Updated: 2018/01/05 16:38:24 by egaraz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,26 @@ int		helper(char **line, t_lst *buffstat)
 {
 	char			*str;
 
-	str = ft_strchr(buffstat->s, '\n');
-	if (str != NULL)
+	str = NULL;
+	if (buffstat->s != NULL)
 	{
-		*str = '\0';
-		//printf("|1|\n");
-		*line = ft_strdup(buffstat->s);
-		buffstat->s = ft_strdup(str + 1);
-		return (1);
-	}
-	//printf("|%s| - |%s|\n",buffstat->s, str);
-	if (0 <  ft_strlen(buffstat->s))
-	{
-		//printf("|2|\n");
-		*line = ft_strdup((buffstat->s));
-		*(buffstat)->s = '\0';
-		return (1);
+		str = ft_strchr(buffstat->s, '\n');
+		if (str != NULL)
+		{
+			*str = '\0';
+			//printf("|1|\n");
+			*line = ft_strdup(buffstat->s);
+			buffstat->s = ft_strdup(str + 1);
+			return (1);
+		}
+		//printf("|%s| - |%s|\n",buffstat->s, str);
+		if (0 <  ft_strlen(buffstat->s))
+		{
+			//printf("|2|\n");
+			*line = ft_strdup((buffstat->s));
+			*(buffstat)->s = '\0';
+			return (1);
+		}
 	}
 	return (0);
 }
